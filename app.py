@@ -4,7 +4,7 @@ from pony.orm import *
 db=Database()
 app=Flask(__name__)
 
-class Produto(db.Entity):
+class Prod(db.Entity):
     cod_barra=Required(str)
     nome_prod=Required(str)
     preco_prod=Required(float)
@@ -25,7 +25,7 @@ def sobre():
 @app.route("/listar_produto")
 def listar_prod():
     with db_session:
-        produtos=Produto.select() 
+        produtos=Prod.select() 
         return render_template("listar_prod.html", produtos=produtos)
 
 @app.route("/form_produto")
@@ -34,12 +34,12 @@ def form_prod():
 
 @app.route("/cadastrar_novo_produto")
 def cadastrar_novo_produto():
-    cod_bar=request.args.get("cod")
-    nome_prod= request.args.get("produto")
-    preco= request.args.get("preco")
+    cod=request.args.get("cod")
+    produto= request.args.get("produto")
+    valor= request.args.get("preco")
     qtdd= request.args.get("qtd")
     tipo= request.args.get("tipo")
     with db_session:
-        i= Produto(**request.args)
+        p= Prod(cod_barra=cod, nome_prod=produto, preco_prod=valor, qtd=qtdd, tipo_prod=tipo)
         commit()
         return redirect("listar_prod") 
