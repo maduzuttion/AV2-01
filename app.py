@@ -43,3 +43,5 @@ def cadastrar_novo_produto():
         i= Produto(**request.args)
         commit()
         return redirect("listar_prod") 
+
+app.run()
