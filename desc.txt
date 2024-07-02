@@ -1,0 +1,9 @@
+AV2: site que lista e cadastra alguma informação; entrega em 29/04; cada item a seguir: 2pts
+a) classe persistente com pelo menos 5 atributos
+b) visual agradável
+c) sistema operante (vídeo demonstrando funcionamento ou sistema online) e hospedado no pythonanywhere
+d) código organizado hospedado em repositório público com pelo menos 3 commits
+e) acompanhamento realizado durante as aulas (realização de exercícios ou desenvolvimento)
+
+Tema: Loja de conveniência
+Link - pythonanywhere:

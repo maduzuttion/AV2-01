@@ -1,0 +1,38 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+  <h1>{% block title %}Cadastro de produto{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<form action="cadastrar_produto">
+    <p>
+        Código de barra: <input type="text" name="cod">
+    </p> 
+
+    <p>
+        Nome do produto: <input type="text" name="produto">
+    </p>
+
+    <p>
+        Preço: <input type="text" name="preco">
+    </p>
+
+    <p>
+        Quantidade: <input type="text" name="qtd">
+    </p>
+
+    <p>
+        Tipo de produto: <br>
+        <input type="radio" name="tipo"><label>Bebida</label><br>
+        <input type="radio" name="tipo"><label>Comida</label><br>
+        <input type="radio" name="tipo"><label>Remédio</label><br>
+        <input type="radio" name="tipo"><label>Roupa</label><br>
+        <input type="radio" name="tipo"><label>Eletrodoméstico</label>
+    </p>
+
+    <button>Cadastrar</button>
+</form>
+
+{% endblock %}

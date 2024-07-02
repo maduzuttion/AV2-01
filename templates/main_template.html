@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>{% block title %}{% endblock %} - Sistema Loja de conveniência</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Maria Eduarda Zuttion" >
+    <meta name="keywords" content="Cadastro, Listagem, Loja de convêniencia">
+    <meta name="description" content="Sistea de cadastro e listagem de itens de uma loja de conveniência">
+</head>
+<body>
+    <h1>Loja de conveniência</h1>
+    <a href="{{url_for('inicio')}}">Página Inicial</a>
+    <a href="{{url_for('sobre')}}">Sobre</a>
+    <a href="{{url_for('listar_prod')}}">Listar produtos</a>
+    <a href="{{url_for('form_prod')}}">Cadastrar novo produto</a>
+
+    <section class="content">
+        <header> {% block header %}{% endblock %} </header>
+
+        {% block content %}{% endblock %}
+    </section>
+
+</body>
+</html>
