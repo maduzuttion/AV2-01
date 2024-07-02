@@ -19,7 +19,7 @@ def inicio():
     return render_template("inicio.html")
 
 @app.route("/sobre")
-def about():
+def sobre():
     return render_template("sobre.html")
 
 @app.route("/listar_produto")
@@ -43,5 +43,3 @@ def cadastrar_novo_produto():
         i= Produto(**request.args)
         commit()
         return redirect("listar_prod") 
-
-app.run()
