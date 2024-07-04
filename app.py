@@ -45,4 +45,4 @@ def cadastrar_novo_produto():
     with db_session:
         p= Prod(cod_barra=cod, nome_prod=produto, preco_prod=valor, qtd=qtdd, tipo_prod=tipo)
         commit()
-        return redirect("listar_prod") 
+        return redirect("listar_produto") 
