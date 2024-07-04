@@ -29,7 +29,7 @@ def sobre():
 def listar_prod():
     with db_session:
         produtos=Prod.select() 
-        return render_template("listar_prod.html", produtos=produtos)
+        return render_template("listar_prod.html", Prod=produtos)
 
 @app.route("/form_produto")
 def form_prod():
